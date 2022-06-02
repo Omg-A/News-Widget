@@ -5,7 +5,7 @@ import json
 root = Tk()
 root.title("Weather App")
 root.geometry("500x600")
-#root.overrideredirect(True)
+root.overrideredirect(True)
 bg_color = "light blue"
 root.configure(background=bg_color)
 
@@ -45,27 +45,27 @@ api_request = requests.get("https://newsapi.org/v1/articles?source=bbc-news&sort
 open_bbc_page = json.loads(api_request.content)
 
 title1 = open_bbc_page["articles"][0]["title"]
-desc1 = open_bbc_page["articles"][0]["description"]
+des1 = open_bbc_page["articles"][0]["description"]
 
 title2 = open_bbc_page["articles"][1]["title"]
-desc2 = open_bbc_page["articles"][1]["description"]
+des2 = open_bbc_page["articles"][1]["description"]
 
 title3 = open_bbc_page["articles"][2]["title"]
-desc3 = open_bbc_page["articles"][2]["description"]
+des3 = open_bbc_page["articles"][2]["description"]
 
 title4 = open_bbc_page["articles"][3]["title"]
-desc4 = open_bbc_page["articles"][3]["description"]
+des4 = open_bbc_page["articles"][3]["description"]
 
 news1["text"] = "Title 1: " + title1
-desc1["text"] = "Description: " + desc1
+desc1["text"] = "Description: " + des1
 
 news2["text"] = "Title 2: " + title2
-desc2["text"] = "Description: " + desc2
+desc2["text"] = "Description: " + des2
 
 news3["text"] = "Title 3: " + title3
-desc3["text"] = "Description: " + desc3
+desc3["text"] = "Description: " + des3
 
 news4["text"] = "Title 4: " + title4
-desc4["text"] = "Description: " + desc4
+desc4["text"] = "Description: " + des4
 
 root.mainloop()
